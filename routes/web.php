@@ -12,6 +12,7 @@ use App\Http\Controllers\Home\HomeController;
 use App\Http\Controllers\paymet\paymetController;
 use App\Http\Controllers\paypal\paypalController;
 use App\Http\Controllers\User\UsuarioController;
+use App\Http\Controllers\viewUserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -52,3 +53,5 @@ Route::resource('/awars',awarsController::class);
 Route::resource('/paymet',paymetController::class)->middleware('auth');
 
 Route::post('/logut',[loginController::class,'logout'])->name('logut');
+
+Route::get('show/{id}',[viewUserController::class,'show'])->name('show.user');
