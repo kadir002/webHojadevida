@@ -609,7 +609,7 @@ $('#descricion-interes-id').val(id);
         cancelButtonText: 'No, gracias!'
 
       }).then((result)=>{
-
+        window.location="/paymet"
       })
     }
 
